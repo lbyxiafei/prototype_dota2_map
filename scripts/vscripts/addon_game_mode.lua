@@ -1,4 +1,5 @@
--- Generated from template
+-- https://developer.valvesoftware.com/wiki/Dota_2_Workshop_Tools/Scripting/API
+-- https://moddota.com/api/#!/vscripts
 
 if Vanilla==nil then
 	Vanilla=class({})
@@ -14,6 +15,8 @@ function Precache( context )
 	]]
 end
 
+require("game_setup")
+
 -- Create the game mode when we activate
 function Activate()
 	GameRules.AddonTemplate = Vanilla()
@@ -23,6 +26,8 @@ end
 function Vanilla:InitGameMode()
 	print( "Template addon is loaded." )
 	GameRules:GetGameModeEntity():SetThink( "OnThink", self, "GlobalThink", 2 )
+
+	GameSetup:init()
 end
 
 -- Evaluate the state of the game
