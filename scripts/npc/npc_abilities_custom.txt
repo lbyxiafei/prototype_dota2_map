@@ -6,11 +6,14 @@
 	//=================================================================================================================
 	// Templar Assassin: Refraction Holdout
 	//=================================================================================================================
-	"templar_assassin_refraction_holdout"
+	"ability_blink"
 	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"ability_blink"
+
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"	
 
 		// Casting
